@@ -195,23 +195,35 @@ section {
 
 .section_text_p1_link{
   position: relative;
+  justify-content: center;
+  display: flex;
   transition: 0.5s ease-in-out;
 }
 
-.section_text_p1_link:hover .section__text__p1{
+.text_container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+  text-align: center;
+}
+
+.section_text_p1_link:hover .text{
   opacity: 0;
 }
-
-.section_text_p1_link .section__text__p1{
-  transition: opacity 0.3s ease;
-}
-
-.section_text_p1_link .arrow{
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.section_text_p1_link:hover .arrow{
+.section_text_p1_link:hover .overlay {
   opacity: 1;
 }
 
