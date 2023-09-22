@@ -16,6 +16,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.one-line-text{
+  white-space: nowrap;
+}
+
 #myNavbar {
   position: fixed;
   top: 0;
@@ -234,7 +238,7 @@ section {
 }
 
 .about-details-container {
-  justify-content: center;
+  justify-content: left;
   flex-direction: column;
 }
 
@@ -256,11 +260,11 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: rgb(189, 182, 182);
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  text-align: center;
+  /* text-align: left; */ /*Changes all the texts to left align, do not use!*/
 }
 
 .section-container {
@@ -288,7 +292,7 @@ section {
 }
 
 .experience-details-container {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   flex-direction: column;
 }
@@ -298,14 +302,14 @@ section {
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+  gap: 1.5rem;
+  justify-content:left;
 }
 
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
+  justify-content:left;
   gap: 0.5rem;
 }
 
@@ -317,18 +321,19 @@ article .icon {
 
 #projects {
   position: relative;
+  text-align: center;
 }
 
 .color-container {
   border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  background: rgb(189, 182, 182);
 }
 
-.project-img {
+/* .project-img {
   border-radius: 2rem;
   width: 90%;
   height: 90%;
-}
+} */
 
 .project-title {
   margin: 1rem;
@@ -340,6 +345,9 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
+.project-one-title{
+  text-decoration: underline;
+}
 /* CONTACT */
 
 #contact {
@@ -381,6 +389,24 @@ article .icon {
 }
 
 /* FOOTER SECTION */
+
+.back-to-top {
+  display: none; /* Initially hide the button */
+  position: fixed; /* Fixed position at the bottom right */
+  bottom: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: rgb(189, 182, 182);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 13px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.back-to-top:hover {
+  opacity: 0.7; /* Adjust opacity on hover */
+}
+
 
 footer {
   height: 26vh;
