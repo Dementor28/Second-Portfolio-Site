@@ -80,9 +80,16 @@ a:hover {
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 0 10rem;
+  /* margin: 0 10rem; */
+  margin: 0 5%;
   box-sizing: border-box;
   min-height: fit-content;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    margin: 0 10rem; /* Increase margin for larger screens */
+  }
 }
 
 .section-container {
@@ -100,9 +107,20 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin: auto;
+}
+
+/* Hide my picture in phone screen */
+@media screen and (max-width: 768px) {
+  .section__pic-container{
+    display: none;
+  }
+  #profile{
+    height: 81vh;
+  }
 }
 
 .section__text {
@@ -116,16 +134,32 @@ section {
 
 .section__text__p1 {
   text-align: center;
+  font-size: 3vw;
 }
 
 .section__text__p2 {
-  font-size: 1.75rem;
+  font-size: 3vw;
   margin-bottom: 1rem;
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 4.5vw;
   text-align: center;
+}
+
+/* Media queries to stop text sizes from going past max limit */
+@media screen and (min-width: 768px) {
+  .section__text__p1 {
+    font-size: 30px;
+  }
+
+  .section__text__p2 {
+    font-size: 30px;
+  }
+
+  .title {
+    font-size: 45px;
+  }
 }
 
 #socials-container {
@@ -239,22 +273,41 @@ section {
 
 .about-details-container {
   justify-content: left;
-  flex-direction: column;
+  flex: 1;
 }
 
 .about-containers,
 .about-details-container {
-  display: flex;
+  display:flex;
+  flex-direction: column; /* stacks the elements vertically on smaller screens*/
+}
+
+/* Media query to stack elements side by side in larger screens */
+@media screen and (min-width: 768px) {
+  .about-containers,
+  .about-details-container {
+    flex-direction: row; /* Arrange elements side by side on larger screens */
+    /* align-items: flex-start; */
+  }
 }
 
 .about-pic {
   border-radius: 2rem;
+  max-width: 100%;
 }
 
 .arrow {
   position: absolute;
   right: -5rem;
-  bottom: 2.5rem;
+  bottom: 0rem;
+}
+
+@media screen and (max-width: 767px){
+  .arrow{
+    right: 0rem;
+    bottom: -0.7rem;
+  }
+  
 }
 
 .details-container {
@@ -274,7 +327,8 @@ section {
 
 .section__pic-container {
   height: 400px;
-  width: 400px;
+  width: 100%;
+  max-width: 100%;
   margin: auto 0;
 }
 
@@ -292,8 +346,8 @@ section {
 }
 
 .experience-details-container {
-  /* display: flex; */
-  justify-content: center;
+  display: flex;
+  justify-content: left; /* change and check*/
   flex-direction: column;
 }
 
@@ -301,7 +355,7 @@ section {
   display: flex;
   text-align: initial;
   flex-wrap: wrap;
-  flex-direction: row;
+  /* flex-direction: row; */
   gap: 1.5rem;
   justify-content:left;
 }
@@ -393,8 +447,8 @@ article .icon {
 .back-to-top {
   display: none; /* Initially hide the button */
   position: fixed; /* Fixed position at the bottom right */
-  bottom: 10px;
-  right: 10px;
+  bottom: 6px;
+  left: 10px;
   padding: 5px 10px;
   background-color: rgb(189, 182, 182);
   color: #fff;
