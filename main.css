@@ -35,10 +35,10 @@ p {
 
 @media screen and (max-width: 768px) {
   p{
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   h3{
-    font-size: 2vw;
+    font-size: 4vw;
   }
 }
 
@@ -490,4 +490,8 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+.contact-text{
+  font-size: 2vw;
 }
