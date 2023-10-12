@@ -20,7 +20,7 @@
   <body>
     <nav id="myNavbar" class="navbar navbar-expand-lg main">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Abdullah</a>
+        <a class="navbar-brand" href="#profile">Abdullah</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#profile">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About Me</a>
@@ -57,7 +57,7 @@
     <section id="profile">
       <div class="section__pic-container">
         <img
-          src="./Assets/Abdullah_Pic-removebg-preview (3).png"
+          src="/Assets/Abdullah-Photo.gif"
           alt="Abdullah profile picture"
         />
       </div>
@@ -132,7 +132,7 @@
           <p>Nothing here for now...</p>
         </div> -->
       </div>
-      <a href="./#experience">
+      <a href="#experience">
         <img
           src="./assets/down-right.png"
           alt="Arrow icon"
@@ -295,13 +295,16 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/down-right.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
+      <a href="#projects">
+        <img
+          src="./assets/down-right.png"
+          alt="Arrow icon"
+          class="arrow icon"
+        />
+      </a> 
     </section>
+
+    <!-- Projects Section -->
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -326,13 +329,16 @@
             </div>
           </div>
       </div>
-      <img
-        src="./assets/down-right.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+      <a href="#contact">
+        <img
+          src="./assets/down-right.png"
+          alt="Arrow icon"
+          class="arrow icon"
+        />
+      </a> 
     </section>
+
+    <!-- Contact Section -->
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -356,8 +362,13 @@
       </div>
     </section>
     <footer>
-      <a href="#" class="back-to-top"> Back to Top</a>
-      <p>Copyright &#169; 2023 Abdullah. All Rights Reserved.</p>
+      <a href="#" class="to-top"> Back to Top</a>
+      <h3 style="text-align: center;">You reached the End.</h3>
+      <!-- <p>Click the button to go back up</p>
+        <img
+        class = "footer-arrow"
+        src="./Assets/arrow.png"
+        /> -->
     </footer>
     <script src="script.js"></script>
   </body>

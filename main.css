@@ -65,8 +65,6 @@ a,
 
 a {
   color: black;
-  text-decoration: none;
-  text-decoration-color: white;
 }
 
 a:hover {
@@ -115,12 +113,27 @@ section {
   height: 80vh;
 }
 
-.section__pic-container {
+/* .section__pic-container {
   display: flex;
   max-width: 100%;
   height: auto;
   width: auto;
   margin: auto;
+} */
+
+.section__pic-container {
+  display:flex;
+  /* justify-content: left;
+  align-items: left; */
+  /* width: 50%; */
+  position: relative;
+  height: 65%;
+  top: 25%;
+  left: -10%;
+  max-width: 100%;
+  border: 0.01px solid #000;
+  border-radius: 5px; /* Adjust the border-radius to control the roundness of corners */
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 22px 70px 4px;
 }
 
 /* Hide my picture in phone screen */
@@ -294,6 +307,7 @@ section {
 .about-containers,
 .about-details-container {
   display:flex;
+  justify-content: center;
   flex-direction: column; /* stacks the elements vertically on smaller screens*/
 }
 
@@ -321,6 +335,7 @@ section {
   .arrow{
     right: 0rem;
     bottom: -0.7rem;
+    opacity: 0; /* Hide the arrow in smaller screens */
   }
   
 }
@@ -340,12 +355,7 @@ section {
   height: 80%;
 }
 
-.section__pic-container {
-  height: 400px;
-  width: 100%;
-  max-width: 100%;
-  margin: auto 0;
-}
+
 
 /* EXPERIENCE SECTION */
 
@@ -464,23 +474,41 @@ article .icon {
 }
 
 /* FOOTER SECTION */
-
-.back-to-top {
-  display: none; /* Initially hide the button */
-  position: fixed; /* Fixed position at the bottom right */
-  bottom: 6px;
-  left: 10px;
-  padding: 5px 10px;
-  background-color: rgb(189, 182, 182);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 13px;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.back-to-top:hover {
-  opacity: 0.7; /* Adjust opacity on hover */
-}
+  .to-top{
+    color:white;
+    padding:1.8em;
+    display:none;/* or block */
+    /* position:relative; */
+    position: fixed;
+    bottom: 6px;
+    left: 10px;
+    border-color:white;
+    text-decoration:none;
+    transition:all .3s ease-out;
+  }
+  .to-top:before{
+    content:'▲';
+    font-size:.9em;
+    position:absolute;
+    text-align: center;
+    top:0;
+    left:50%;
+    margin-left:-.9em;
+    border:solid .13em white;
+    border-radius:10em;
+    width:1.4em;
+    height:1.4em;
+    line-height:1.3em;
+    border-color:inherit;
+    transition:transform .5s ease-in;
+  }
+  .to-top:hover{
+    color:pink;
+    border-color:pink;
+  }
+  .to-top:hover:before{
+    transform: rotate(360deg);
+  }
 
 
 footer {
@@ -495,3 +523,12 @@ footer p {
 .contact-text{
   font-size: 2vw;
 }
+
+/* Arrow pointing towards back to top button */
+/* .footer-arrow {
+  position: relative;
+  width: 40%;
+  height: 40%;
+  right: -5%; /* Adjust this value to position the arrowhead
+  top: translateY(-50%); /* Adjust this value to vertically center the arrow
+} */
