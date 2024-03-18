@@ -20,6 +20,7 @@ html {
   white-space: nowrap;
 }
 
+
 #myNavbar {
   position: fixed;
   top: 0;
@@ -86,17 +87,18 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
+  /* padding-top: 4vh; */
   height: 96vh;
   /* margin: 0 10rem; */
   margin: 0 5%;
   box-sizing: border-box;
-  min-height: fit-content;
+  min-height: 100vh;
 }
 
 @media screen and (min-width: 768px) {
   section {
-    margin: 0 10rem; /* Increase margin for larger screens */
+    height: auto;
+    padding-top: 10vh;
   }
 }
 
@@ -110,7 +112,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
+  height: 10vh;
 }
 
 /* .section__pic-container {
@@ -142,7 +144,7 @@ section {
     display: none;
   }
   #profile{
-    height: 81vh;
+    height: auto;
   }
 }
 
@@ -256,7 +258,7 @@ section {
 
 #about {
   position: relative;
-  padding-top: 15vh;
+  padding-top: 10vh;
 }
 
 .section_text_p1_link{
@@ -405,6 +407,7 @@ article .icon {
 /* PROJECTS SECTION */
 
 #projects {
+  padding-top: 15vh;
   position: relative;
   text-align: center;
 }
