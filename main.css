@@ -212,7 +212,9 @@ section {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: auto;
 }
+
 .btn-container:hover{
   color: white
 }
@@ -349,7 +351,8 @@ section {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  /* text-align: left; */ /*Changes all the texts to left align, do not use!*/
+  display: flex;
+  flex-direction: column;
 }
 
 .section-container {
@@ -431,6 +434,11 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid rgb(163, 163, 163);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .project-one-title{
